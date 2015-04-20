@@ -31,7 +31,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'thin'
 
-gem 'pry'
+#gem 'pry'
 
 
 # Use ActiveModel has_secure_password

@@ -1,0 +1,132 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+ 
+form{
+	background-color:blue;
+}
+ 
+ div.common_header{
+	background: url('header_h.png') no-repeat;
+	background-size: 100% 100%;
+	text-align:center;
+	margin-top:0;
+	margin-left:auto;
+	margin-right:auto;
+	top:0;
+}
+
+
+
+div.content{
+	margin-top:100px;	
+}
+
+
+div#home_content{
+	margin-top:100px;
+	z-index:-9999999;
+	width:500px;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+table.list{
+	width:100%;
+}
+
+
+
+
+
+.menusHorizontal > ul{
+    list-style-type:none;
+	text-align:center;
+	margin-left:-60px;
+	width:950px !important;
+}
+
+.menu-item-h {
+    display:inline-block;
+    background: linear-gradient(180deg, white, #1B4D82, #1B4D82, #1B4D82, #1B4D82, #1B4D82, #1B4D82, #1B4D82, #1B4D82, #1B4D82,#1B4D82);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
+    color:white;
+    font-size:14px;
+    height:50px;
+    text-align:center;
+    width:120px;
+    margin-top:5px;
+
+}
+
+
+li.menu-item-h > a {
+	padding-top:15px;
+	padding-bottom:15px;
+	text-decoration:none;
+	text-shadow:none;
+	display:block;
+	border-radius: 10px;
+	color:white;
+	height:20px !important;
+	margin:0;
+		
+} 
+
+
+
+li.menu-item-h > a:hover{
+    color:white;
+    font-weight:bolder;
+    font-size:15px;
+} 
+
+
+footer{
+	  margin:0;
+      border:none;
+	  position:absolute;
+	  bottom:0;
+	  }
+div.mobile_footer > ul{		  
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 0px;
+	margin-top:-1px;
+	list-style:none;
+	
+
+ }
+ 
+div.mobile_footer > ul > li{
+		float:left;
+		display:inline-block;
+	}
+
+	
+.description{
+	text-align:left;
+
+}
+
+
+
+ 

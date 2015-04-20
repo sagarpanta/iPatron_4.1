@@ -1,0 +1,96 @@
+<div data-role="content" id="notifications_content">
+	
+		<%= render '/notifications/realtimenotification' %>
+		<table>
+		<% @notifications.each do |notification| %>
+				<% notification.set_bulb_to_zero %>
+				<% if notification.read == 0 %>
+							<% if notification.notification == 'offers' %>
+								 <tr class="notification_list_unread">
+									<td class="spacer"><%= image_tag 'spacer.png' %></td><td class="image"><%= image_tag 'spacer.png' %><br/><%= image_tag  notification.code+'o.png' , :width =>'60px' , :height=> '60px' %></td>
+									<td>
+										<h5>Offer:&nbsp;<%= notification.description %></h5>
+										<p>Start Date: <%= notification.startdate.strftime("%b %d, %Y") %></p>
+										<p>End Date: <%= notification.enddate.strftime("%b %d, %Y") %></p>
+									</td>
+									
+									<td class="mark_as_read">
+										<%= image_tag 'unread1.png' , :class=> "unread" %>
+										<p class="read" style="display:none">/notifications/<%= notification.id   %></p>
+									</td>
+								</tr>
+							<% elsif notification.notification == 'events' %>
+								 <tr  class="notification_list_unread" >
+									<td class="spacer"><%= image_tag 'spacer.png' %></td><td class="image"><%= image_tag 'spacer.png' %><br/><%= image_tag notification.code+'e.png' , :width =>'60px' , :height=> '60px' %></td>
+									<td>
+										<h5>Event:&nbsp;<%= notification.description %></h5>
+										<p>Start Date: <%= notification.startdate.strftime("%b %d, %Y") %></p>
+										<p>End Date: <%= notification.enddate.strftime("%b %d, %Y") %></p>
+									</td>
+									
+									<td class="mark_as_read">
+										<%= image_tag 'unread1.png' , :class=> "unread" %>
+										<p class="read" style="display:none">/notifications/<%= notification.id   %></p>
+									</td>
+								</tr>
+							<% elsif notification.notification == 'promotions' %>
+								<tr class="notification_list_unread">
+									<td class="spacer"><%= image_tag 'spacer.png' %></td><td class="image"><%= image_tag 'default_promotion.png' , :width =>'60px' , :height=> '60px' %></td>
+									<td>
+										<h5>Promotion:&nbsp;<%= notification.description %></h5>
+										<p>Start Date: <%= notification.startdate.strftime("%b %d, %Y") %></p>
+										<p>End Date: <%= notification.enddate.strftime("%b %d, %Y") %></p>
+										<p>Entries: <%= notification.num_of_entries %>&nbsp;&nbsp;&nbsp;Drawing: <%= notification.drawingtime.strftime("%b %d, %Y %I:%M%p") %></p></td>
+									<td class="mark_as_read">
+										<%= image_tag 'unread1.png' , :class=> "unread" %>
+										<p class="read" style="display:none">/notifications/<%= notification.id   %></p>
+									</td>
+									
+								</tr>
+							<% end %>
+				<% else %>
+						
+							<% if notification.notification == 'offers' %>
+								 <tr class="notification_list">
+									<td class="spacer"><%= image_tag 'spacer.png' %></td><td class="image"><%= image_tag 'spacer.png' %><br/><%= image_tag  notification.code+'o.png' , :width =>'60px' , :height=> '60px' %></td>
+									<td>
+										<h5>Offer:&nbsp;<%= notification.description %></h5>
+										<p>Start Date: <%= notification.startdate.strftime("%b %d, %Y") %></p>
+										<p>End Date: <%= notification.enddate.strftime("%b %d, %Y") %></p>
+									</td>
+									<td class="mark_as_read"></td>
+								</tr>
+							<% elsif notification.notification == 'events' %>
+								 <tr  class="notification_list" >
+									
+									<td class="spacer"><%= image_tag 'spacer.png' %></td><td class="image"><%= image_tag 'spacer.png' %><br/><%= image_tag notification.code+'e.png' , :width =>'60px' , :height=> '60px' %></td>
+									<td>
+										<h5>Event:&nbsp;<%= notification.description %></h5>
+										<p>Start Date: <%= notification.startdate.strftime("%b %d, %Y") %></p>
+										<p>End Date: <%= notification.enddate.strftime("%b %d, %Y") %></p>
+									</td>
+									<td class="mark_as_read"></td>
+									
+									
+								</tr>
+							<% elsif notification.notification == 'promotions' %>
+								<tr class="notification_list">
+									<td class="spacer"><%= image_tag 'spacer.png' %></td><td class="image"><%= image_tag 'default_promotion.png' , :width =>'60px' , :height=> '60px' %></td>
+									<td>
+										<h5>Promotion:&nbsp;<%= notification.description %></h5>
+										<p>Start Date: <%= notification.startdate.strftime("%b %d, %Y") %></p>
+										<p>End Date: <%= notification.enddate.strftime("%b %d, %Y") %></p>
+										<p>Entries: <%= notification.num_of_entries %>&nbsp;&nbsp;Drawing: <%= notification.drawingtime.strftime("%b %d, %Y %I:%M%p") %></p></td>
+									</td>
+									<td class="mark_as_read"></td>
+								</tr>
+							<% end %>
+
+				<% end %>
+
+
+		<% end %>
+		</table>
+
+
+</div>

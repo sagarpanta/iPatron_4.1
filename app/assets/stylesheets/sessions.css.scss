@@ -1,0 +1,84 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.field
+{
+	position: relative;
+	width: 100px !important;
+
+}
+
+
+.actions
+{
+	position: relative;
+	width: 100px;
+}
+
+
+
+#signin_page {
+background: url(background_v.png) no-repeat;
+background-size: 100% 100%;
+color: black;
+text-shadow: none;
+}
+
+h3,h5{
+font-family: "Verdana";
+}
+
+
+.field{
+color:white;
+font-family: "Verdana";
+font-size:10px;
+
+}
+
+
+
+.actions{
+color:white;
+font-family: "Verdana";
+font-size:10px;
+}
+
+
+
+
+.within_header{
+	margin-left:10px;
+	opacity:0.8;
+	width:20px;
+}
+
+
+#signin_list1{
+	text-align:center;
+	width:300px;
+}
+
+#signin_list2{
+	text-align:center;
+	width:300px;
+}
+
+
+@media only screen and (device-width: 768px) {
+  /* For general iPad layouts */
+	div.common_header{
+		background: url('header_h.png') no-repeat;
+		background-size: 100% 100%;
+	}
+	
+	#signin_page {
+		background: url(/assets/background_h.png) no-repeat;
+		background-size: 100% 100%;
+		color: black;
+		text-shadow: none;
+	}
+}
+
+

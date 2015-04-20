@@ -1,0 +1,43 @@
+<div data-role="page" id="signin_page">
+
+<div data-role="header" class="common_header">
+		<%= form_for(:session, :url => sessions_path, :html=>{:class=>"within_header"}) do |f| %>
+		  <div class="field">
+			<%= f.label :playerid , "Player ID" %>
+			<%= f.text_field :playerid %>
+		  </div>
+		  <div class="field">
+			<%= f.label :password %>
+			<%= f.password_field :password %>
+		  </div>
+		  <div class="actions" id="submit">
+			<%= f.submit "Sign In" %>
+		  </div>
+		<% end %>
+</div>
+
+<div page-role="content" style="margin-top:100px;">
+	<table id="signin_list1" cellspacing="0" cellpadding="0">
+		<tr>
+			<td><%= image_tag '/assets/img5.png' , :height=>'80', :width=>'150' %></td>
+			<td><%= image_tag '/assets/img6.png' , :height=>'80', :width=>'80' %></td>
+			<td><%= image_tag '/assets/img1.png' , :height=>'80', :width=>'80' %></td>
+		</tr>
+	</table>
+	<table id="signin_list2">
+		<tr>
+			<td><%= image_tag '/assets/img3.png' ,:height=>'80', :width=>'100' %></td>
+			<td><%= image_tag '/assets/img4.png' ,:height=>'80', :width=>'100' %></td>
+			<td><%= image_tag '/assets/img2.png' ,:height=>'80', :width=>'100' %></td>
+		</tr>
+	
+	</table>
+
+</div>
+
+
+<div id="signin_notification" style="display:none"><%= image_tag '/assets/dark.png' %></div>
+<div id="store_img_pos" style="display:none"></div>
+
+
+</div>

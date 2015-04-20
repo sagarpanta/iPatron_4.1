@@ -1,0 +1,42 @@
+
+
+<div data-role="content" class="content">
+
+	<div id="promotions_content">
+		  <%= render '/promotions/realtimepromotion' %>
+		  <table class="list">
+			<% @promotions.each do |p| %>
+				<% if p.read == 0 %>
+					<tr class="promotion_list_unread" data-time="<%=  p.created_at  %>">
+						<td class="image"><%= image_tag 'default_promotion.png' , :width =>'60px' , :height=> '60px' %></td>
+						<td class="description">
+							<h5><%= p.description %></h5>
+							<p>Entries: <%= p.num_of_entries %></p>
+							<p>Start Date: <%= p.startdate.strftime("%b %d, %Y") %></p>
+							<p>End Date: <%= p.enddate.strftime("%b %d, %Y") %></p>
+							<p>Drawing: <%= p.drawingtime.strftime("%b %d, %Y %I:%M%p") %></p>
+						</td>
+											
+						<td class="mark_as_read">
+							<%= image_tag 'unread1.png' , :class=> "unread" %>
+							<p class="read" style="display:none">/promotions/<%= p.id   %>.json</p>
+						</td>
+					</tr>
+				<% else %>
+					<tr class="promotion_list" data-time="<%=  p.created_at  %>">
+						<td class="image"><%= image_tag 'default_promotion.png' , :width =>'60px' , :height=> '60px' %></td>
+						<td class="description">
+							<h5><%= p.description %></h5>
+							<p>Entries: <%= p.num_of_entries %></p>
+							<p>Start Date: <%= p.startdate.strftime("%b %d, %Y") %></p>
+							<p>End Date: <%= p.enddate.strftime("%b %d, %Y") %></p>
+							<p>Drawing: <%= p.drawingtime.strftime("%b %d, %Y %I:%M%p") %></p>
+						</td>
+					</tr>
+				<% end %>
+			<% end %>
+		  </table>
+		  <div id="unread_bulbs" style="display:none"><%= @bulbs %></div>
+	</div>
+
+</div>

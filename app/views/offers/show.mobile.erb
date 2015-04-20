@@ -1,0 +1,6 @@
+<%= @offer.mark_as_read %>
+<% @notifications.each do |n| %>
+	<% n.set_bulb_to_zero %>
+<% end %>
+
+<% Notification.mark_as_read(current_player.playerid, @offer.id, 'offers') %>

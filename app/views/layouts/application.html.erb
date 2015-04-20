@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>iPatron 4.1</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />  
+
+  <%= javascript_include_tag "application" %>
+  
+  <script  src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('a').removeClass('ui-link');
+	});
+
+<script>
+
+</body>
+</html>

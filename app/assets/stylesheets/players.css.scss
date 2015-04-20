@@ -1,0 +1,119 @@
+// Place all the styles related to the Players controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+#home_page, #signin_page {background: url(background_h.png) no-repeat;
+background-size: 100% 100%;
+color: white;
+text-shadow: none;
+max-width: 950px;
+}
+
+
+.alignleft {
+	margin-top:5px !important;
+	float:left;
+	text-shadow:none;
+	color:white;
+}
+
+.alignright {
+	float:right;
+}
+
+.ui-bar{
+	margin-top:-5px;
+	margin-bottom:-1px;
+}
+
+div#logout_div{
+position:relative;
+width:80px;
+height:25px;
+border:1px solid #3B3B3B;
+border-radius:5px;
+background-color:#3B3B3B;
+margin-top:5px;
+margin-left:auto;
+margin-right:auto;
+}
+
+#logout_div:hover{
+background-color: #5F9ECC;
+}
+
+#logout_div a{
+	color:white;
+	text-decoration:none;
+	vertical-align:middle;
+	margin-left:8px;
+}
+
+#logout_div a:hover{
+	background-color: transparent;
+}
+
+
+a.logout{
+	color:white !important;
+}
+
+
+ table, tr, td{
+ position: relative;
+ margin: auto;
+
+
+}
+
+.td1 {
+width:50%;
+text-align:right
+}
+
+.spacer{
+width:1%;
+
+}
+
+
+
+.image{
+width:2%;
+text-align:center;
+}
+
+.description{
+width:50%
+}
+
+.mark_as_read{
+width:1%;
+text-align:right;
+
+}
+
+
+
+h3, h5{
+font-family: "Verdana";
+}
+
+
+div#img{
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+#img > img{
+	position:relaitve;
+	width:100% !important;
+	height:250px !important;
+
+}
+
+
+

@@ -1,0 +1,41 @@
+<div data-role="content" >
+	<div id="events_content">
+		  <%= render '/events/realtimeevent' %>
+		  <table>
+		  <% @events.each do |e| %>
+			<% if e.read == 0 %>
+					<tr  class="event_list_unread" data-time="<%=  e.created_at  %>" data-id="<%= e.id %>">
+						<td class="spacer"><%= image_tag 'spacer.png' %></td><td class="image"><%= image_tag e.code+'e.png' , :width =>'60px' , :height=> '60px' %></td>
+						<td class="description">
+							<h5><%= e.description %></h5>
+							<p>Start Date: <%= e.startdate.strftime("%b %d, %Y") %></p>
+							<p>End Date: <%= e.enddate.strftime("%b %d, %Y") %></p>
+						</td>
+						
+						<td class="mark_as_read">
+								<%= image_tag 'unread1.png' , :class=> "unread" %>
+								<p class="read" style="display:none">/events/<%= e.id   %></p>
+						</td>
+					</tr>
+					
+					
+					
+			<% else %>
+				<tr  class="event_list" data-time="<%=  e.created_at  %>">
+						<td class="spacer"><%= image_tag 'spacer.png' %></td><td class="image"><%= image_tag e.code+'e.png' , :width =>'60px' , :height=> '60px' %></td>
+						<td class="description">
+							<h5><%= e.description %></h5>
+							<p>Start Date: <%= e.startdate.strftime("%b %d, %Y") %></p>
+							<p>End Date: <%= e.enddate.strftime("%b %d, %Y") %></p>
+						</td>
+				</tr>
+				
+			
+			<% end %>
+		  <% end %>
+		  </table>
+		  <div id="unread_bulbs" style="display:none"><%= @bulbs %></div>
+		
+	</div>
+</div>
+

@@ -65,6 +65,7 @@ class PlayersController < ApplicationController
   
   
   def player_home
+    @message_from_service = Player.initialize(current_player.playerid)
 	if !signed_in?
 		redirect_to signin_path
 	else

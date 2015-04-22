@@ -130,6 +130,9 @@ $(document).on('pageinit' ,'[data-role="page"]', function(){
 		$('.elementwidth').css('color', 'white');
         $('.elementwidth').html(event.pageX+ ',  ' + event.pageY);
     });
+	
+	
+	alert($('#WCF_msg').html());
 
 	
 	

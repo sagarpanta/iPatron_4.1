@@ -26,7 +26,6 @@ class Player < ActiveRecord::Base
   
 
   
-  
 
 
   def has_password?(submitted_password)
@@ -52,6 +51,21 @@ class Player < ActiveRecord::Base
       self.salt = make_salt unless has_password?(encrypted_password)
       self.encrypted_password = encrypt(encrypted_password)
     end
+	
+
+  def self.initialize(playerid)
+    message = ''
+	client = Savon.client(wsdl: 'http://sagar007p-001-site1.smarterasp.net/TestIPatronService.svc?singleWsdl')
+    
+	response = client.call(:get_message, message: { 'PlayerID' => playerid })
+	if response.success?
+      data = response.to_array(:get_message_response, :get_message_result).first
+	  if data
+        message = data
+      end
+    end
+	return message
+  end	
   
 private
 

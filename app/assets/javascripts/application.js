@@ -21,8 +21,10 @@ $(document).on('pageinit' ,'[data-role="page"]', function(){
 	var page = '#' + $('[data-role="page"]').attr('id');
 	if (page == '#signin_page')
 		$.mobile.ajaxEnabled = false;
-	else
+	else{
 		$.mobile.ajaxEnabled = true;
+		alert($('#WCF_msg').html());
+	}
 	
 	var screenwidth = $(page).width();
 	var windowWidth = $(window).width();
@@ -132,7 +134,7 @@ $(document).on('pageinit' ,'[data-role="page"]', function(){
     });
 	
 	
-	alert($('#WCF_msg').html());
+	
 
 	
 	

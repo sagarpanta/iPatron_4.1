@@ -204,7 +204,6 @@ $(document).on('pageinit' ,'[data-role="page"]', function(){
 	$('.logout').bind('click', function(){
 		$.mobile.ajaxEnabled = false;
 		$('#logoutPressed').html('yes');
-		alert("hello");
 	});
 	
 	
